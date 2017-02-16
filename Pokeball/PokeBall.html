@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PokeBall</title>
+    <style>
+
+        .container{
+            /*background-color: #7f8c8d;*/
+        }
+
+        .pokeball{
+            width: 10em;
+            height: 10em;
+            background-color: white;
+            border-radius: 50%;
+            border: .2em solid #333;
+
+            position: absolute;
+            left: 5em;
+            overflow: hidden;
+        }
+
+        .pokeball::before{
+            content: "";
+            width: 10em;
+            height: 5em;
+            border-radius: 5em 5em 0 0;
+            background-color: red;
+            position: absolute;
+        }
+
+        .pokeball-details{
+            width: 10em;
+            height: 1em;
+            background-color: #333;
+            position: absolute;
+            top: 4.6em;
+            border-radius: 10%;
+        }
+
+        .pokeball-details::before{
+            content: "";
+            background-color: #333;
+            width: 3.5em;
+            height: 3.5em;
+            border-radius: 50%;
+            position: absolute;
+            top: -1.25em;
+            left: 3.25em;
+            z-index: 200;
+        }
+
+        .pokeball-details::after{
+            content: "";
+            background-color: white;
+            width: 2.4em;
+            height: 2.4em;
+            border-radius: 50%;
+            position: absolute;
+            top: -.65em;
+            left: 3.8em;
+            z-index: 250;
+        }
+
+        .pokeball-ring{
+            width: 2em;
+            height: 2em;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            top: -.48em;
+            left: 4em;
+            z-index: 300;
+        }
+
+    </style>
+</head>
+<body class="container">
+<div class="pokeball">
+    <div class="pokeball-details">
+        <div class="pokeball-ring">
+        </div>
+    </div>
+</div>
+</body>
+</html>
